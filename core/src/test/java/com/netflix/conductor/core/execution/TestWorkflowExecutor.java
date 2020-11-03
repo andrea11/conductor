@@ -48,8 +48,11 @@ import com.netflix.conductor.core.utils.IDGenerator;
 import com.netflix.conductor.dao.MetadataDAO;
 import com.netflix.conductor.dao.QueueDAO;
 import com.netflix.conductor.service.ExecutionLockService;
+import com.netflix.conductor.service.WorkflowValidator;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.mockito.ArgumentCaptor;
 import org.mockito.stubbing.Answer;
 
@@ -96,43 +99,48 @@ import static org.mockito.Mockito.when;
  */
 public class TestWorkflowExecutor {
 
-    private WorkflowExecutor workflowExecutor;
-    private ExecutionDAOFacade executionDAOFacade;
-    private MetadataDAO metadataDAO;
-    private QueueDAO queueDAO;
-    private WorkflowStatusListener workflowStatusListener;
-    private ExecutionLockService executionLockService;
+	private WorkflowExecutor workflowExecutor;
+	private ExecutionDAOFacade executionDAOFacade;
+	private MetadataDAO metadataDAO;
+	private QueueDAO queueDAO;
+	private WorkflowStatusListener workflowStatusListener;
+	private ExecutionLockService executionLockService;
+	private WorkflowValidator workflowValidator;
 
-    @Before
-    public void init() {
-        TestConfiguration config = new TestConfiguration();
-        executionDAOFacade = mock(ExecutionDAOFacade.class);
-        metadataDAO = mock(MetadataDAO.class);
-        queueDAO = mock(QueueDAO.class);
-        workflowStatusListener = mock(WorkflowStatusListener.class);
-        ExternalPayloadStorageUtils externalPayloadStorageUtils = mock(ExternalPayloadStorageUtils.class);
-        executionLockService = mock(ExecutionLockService.class);
-        ObjectMapper objectMapper = new JsonMapperProvider().get();
-        ParametersUtils parametersUtils = new ParametersUtils();
-        Map<String, TaskMapper> taskMappers = new HashMap<>();
-        taskMappers.put("DECISION", new DecisionTaskMapper());
-        taskMappers.put("DYNAMIC", new DynamicTaskMapper(parametersUtils, metadataDAO));
-        taskMappers.put("FORK_JOIN", new ForkJoinTaskMapper());
-        taskMappers.put("JOIN", new JoinTaskMapper());
-        taskMappers.put("FORK_JOIN_DYNAMIC", new ForkJoinDynamicTaskMapper(parametersUtils, objectMapper, metadataDAO));
-        taskMappers.put("USER_DEFINED", new UserDefinedTaskMapper(parametersUtils, metadataDAO));
-        taskMappers.put("SIMPLE", new SimpleTaskMapper(parametersUtils));
-        taskMappers.put("SUB_WORKFLOW", new SubWorkflowTaskMapper(parametersUtils, metadataDAO));
-        taskMappers.put("EVENT", new EventTaskMapper(parametersUtils));
-        taskMappers.put("WAIT", new WaitTaskMapper(parametersUtils));
-        taskMappers.put("HTTP", new HTTPTaskMapper(parametersUtils, metadataDAO));
-        taskMappers.put("LAMBDA", new LambdaTaskMapper(parametersUtils, metadataDAO));
+	@Rule
+	public ExpectedException expectedException = ExpectedException.none();
 
-        DeciderService deciderService = new DeciderService(parametersUtils, metadataDAO, externalPayloadStorageUtils, taskMappers, config);
-        MetadataMapperService metadataMapperService = new MetadataMapperService(metadataDAO);
-        workflowExecutor = new WorkflowExecutor(deciderService, metadataDAO, queueDAO, metadataMapperService,
-            workflowStatusListener, executionDAOFacade, config, executionLockService, parametersUtils);
-    }
+	@Before
+	public void init() {
+		TestConfiguration config = new TestConfiguration();
+		executionDAOFacade = mock(ExecutionDAOFacade.class);
+		metadataDAO = mock(MetadataDAO.class);
+		queueDAO = mock(QueueDAO.class);
+		workflowStatusListener = mock(WorkflowStatusListener.class);
+		ExternalPayloadStorageUtils externalPayloadStorageUtils = mock(ExternalPayloadStorageUtils.class);
+		executionLockService = mock(ExecutionLockService.class);
+		workflowValidator = mock(WorkflowValidator.class);
+		ObjectMapper objectMapper = new JsonMapperProvider().get();
+		ParametersUtils parametersUtils = new ParametersUtils();
+		Map<String, TaskMapper> taskMappers = new HashMap<>();
+		taskMappers.put("DECISION", new DecisionTaskMapper());
+		taskMappers.put("DYNAMIC", new DynamicTaskMapper(parametersUtils, metadataDAO));
+		taskMappers.put("FORK_JOIN", new ForkJoinTaskMapper());
+		taskMappers.put("JOIN", new JoinTaskMapper());
+		taskMappers.put("FORK_JOIN_DYNAMIC", new ForkJoinDynamicTaskMapper(parametersUtils, objectMapper, metadataDAO));
+		taskMappers.put("USER_DEFINED", new UserDefinedTaskMapper(parametersUtils, metadataDAO));
+		taskMappers.put("SIMPLE", new SimpleTaskMapper(parametersUtils));
+		taskMappers.put("SUB_WORKFLOW", new SubWorkflowTaskMapper(parametersUtils, metadataDAO));
+		taskMappers.put("EVENT", new EventTaskMapper(parametersUtils));
+		taskMappers.put("WAIT", new WaitTaskMapper(parametersUtils));
+		taskMappers.put("HTTP", new HTTPTaskMapper(parametersUtils, metadataDAO));
+		taskMappers.put("LAMBDA", new LambdaTaskMapper(parametersUtils, metadataDAO));
+
+		DeciderService deciderService = new DeciderService(parametersUtils, metadataDAO, externalPayloadStorageUtils, taskMappers, config);
+		MetadataMapperService metadataMapperService = new MetadataMapperService(metadataDAO);
+		workflowExecutor = new WorkflowExecutor(deciderService, metadataDAO, queueDAO, metadataMapperService,
+				workflowStatusListener, executionDAOFacade, config, executionLockService, parametersUtils, workflowValidator);
+	}
 
     @Test
     public void testScheduleTask() {
@@ -1468,6 +1476,35 @@ public class TestWorkflowExecutor {
 
         verify(executionDAOFacade, times(1)).createWorkflow(any(Workflow.class));
     }
+
+    @Test
+	public void testInputDefinitionValidation() {
+		WorkflowDef def = new WorkflowDef();
+		def.setName("test");
+		def.setInputDefinition(new HashMap<>());
+
+		Map<String, Object> workflowInput = new HashMap<>();
+		String externalInputPayloadStoragePath = null;
+		String correlationId = null;
+		Integer priority = null;
+		String parentWorkflowId = null;
+		String parentWorkflowTaskId = null;
+		String event = null;
+		Map<String, String> taskToDomain = null;
+
+		doThrow(new ApplicationException(ApplicationException.Code.INVALID_INPUT, "Invalid Input")).when(workflowValidator).validate(eq(def), any());
+		expectedException.expect(ApplicationException.class);
+		expectedException.expectMessage("Invalid Input");
+		workflowExecutor.startWorkflow(def,
+				workflowInput,
+				externalInputPayloadStoragePath,
+				correlationId,
+				priority,
+				parentWorkflowId,
+				parentWorkflowTaskId,
+				event,
+				taskToDomain);
+	}
 
     @Test
     public void testScheduleNextIteration() {
