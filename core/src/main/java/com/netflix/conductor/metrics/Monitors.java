@@ -230,12 +230,20 @@ public class Monitors {
 		counter(classQualifier, "workflow_start_error", "workflowName", workflowType, "ownerApp", ""+ownerApp);
 	}
 
+	public static void recordWorkflowValidationError(String workflowType, String ownerApp) {
+		counter(classQualifier, "workflow_validation_error", "workflowName", workflowType, "ownerApp", ""+ownerApp);
+	}
+
 	public static void recordUpdateConflict(String taskType, String workflowType, WorkflowStatus status) {
 		counter(classQualifier, "task_update_conflict", "workflowName", workflowType, "taskType", taskType, "workflowStatus", status.name());
 	}
 
 	public static void recordUpdateConflict(String taskType, String workflowType, Status status) {
 		counter(classQualifier, "task_update_conflict", "workflowName", workflowType, "taskType", taskType, "taskStatus", status.name());
+	}
+
+	public static void recordTaskValidationError(String taskType, String workflowType) {
+		counter(classQualifier, "task_validation_error", "workflowName", workflowType, "taskType", taskType);
 	}
 
 	public static void recordTaskUpdateError(String taskType, String workflowType) {

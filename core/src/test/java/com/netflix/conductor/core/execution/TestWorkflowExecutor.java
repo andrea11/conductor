@@ -1492,7 +1492,7 @@ public class TestWorkflowExecutor {
 		String event = null;
 		Map<String, String> taskToDomain = null;
 
-		doThrow(new ApplicationException(ApplicationException.Code.INVALID_INPUT, "Invalid Input")).when(workflowValidator).validate(eq(def), any());
+		doThrow(new ApplicationException(ApplicationException.Code.INVALID_INPUT, "Invalid Input")).when(workflowValidator).validate(any(), any());
 		expectedException.expect(ApplicationException.class);
 		expectedException.expectMessage("Invalid Input");
 		workflowExecutor.startWorkflow(def,

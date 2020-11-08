@@ -15,11 +15,8 @@
  */
 package com.netflix.conductor.service;
 
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.run.Workflow;
-
 import java.util.Map;
 
 public interface WorkflowValidator {
-	void validate(final WorkflowDef workflowDef, final Workflow workflowInput);
+	void validate(final Map<String, Object> inputDefinition, final Map<String, Object> input);
 }

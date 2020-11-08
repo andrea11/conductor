@@ -425,7 +425,7 @@ public class WorkflowExecutor {
     /**
      * Performs validations for starting a workflow
      *
-     * @throws ApplicationException if the validation fails
+     * @throws ValidationException if the validation fails
      */
     private void validateWorkflow(final WorkflowDef workflowDef, final Workflow workflow) {
         try {
@@ -437,10 +437,28 @@ public class WorkflowExecutor {
             if (config.isInputWorkflowValidationEnabled()) {
                 final Workflow workflowToStart = Optional.of(workflow).filter(w -> w.getInput() != null)
                         .orElse(deciderService.populateWorkflowAndTaskData(workflow));
-                workflowValidator.validate(workflowDef, workflowToStart);
+                workflowValidator.validate(workflowDef.getInputDefinition(), workflowToStart.getInput());
             }
         } catch (Exception e) {
-            Monitors.recordWorkflowStartError(workflowDef.getName(), WorkflowContext.get().getClientApp());
+            Monitors.recordWorkflowValidationError(workflowDef.getName(), WorkflowContext.get().getClientApp());
+            throw e;
+        }
+    }
+
+    /**
+     * Performs validations for scheduling a task
+     *
+     * @throws ValidationException if the validation fails
+     */
+    private void validateTask(final TaskDef taskDef, final Task task) {
+        try {
+            if (config.isInputTaskValidationEnabled()) {
+                workflowValidator.validate(taskDef.getInputDefinition(), task.getInputData());
+            }
+        } catch (final ValidationException e) {
+            Monitors.recordTaskValidationError(taskDef.getName(), WorkflowContext.get().getClientApp());
+            task.setStatus(FAILED_WITH_TERMINAL_ERROR);
+            task.setReasonForIncompletion("Input task validation failed: " + String.join(", ", e.getErrors()));
             throw e;
         }
     }
@@ -1419,6 +1437,7 @@ public class WorkflowExecutor {
                     .orElse(0);
 
             for (Task task : tasks) {
+                validateTask(getTaskDefinition(task), task);
                 if (task.getSeq() == 0) { // Set only if the seq was not set
                     task.setSeq(++count);
                 }
@@ -1463,7 +1482,7 @@ public class WorkflowExecutor {
                     tasksToBeQueued.add(task);
                 }
             }
-        } catch (Exception e) {
+        } catch (final Exception e) {
             List<String> taskIds = tasks.stream()
                     .map(Task::getTaskId)
                     .collect(Collectors.toList());

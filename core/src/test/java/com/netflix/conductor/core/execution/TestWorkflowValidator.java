@@ -14,8 +14,6 @@ package com.netflix.conductor.core.execution;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
-import com.netflix.conductor.common.run.Workflow;
 import com.netflix.conductor.common.utils.JsonMapperProvider;
 import com.netflix.conductor.service.WorkflowValidator;
 import com.netflix.conductor.service.WorkflowValidatorImpl;
@@ -39,26 +37,24 @@ public class TestWorkflowValidator {
 	}
 
 	@Test
-	public void testEmptyInput() throws JsonProcessingException {
-		final WorkflowDef def = new WorkflowDef();
-		def.setInputDefinition(generateInputDefinition());
+	public void testEmptyInputDefinition() {
 		final Map<String, Object> inputs = new HashMap<>();
-		final Workflow workflow = new Workflow();
-		workflow.setInput(inputs);
-		workflowValidator.validate(def, workflow);
+		inputs.put("person", Collections.emptyMap());
+		workflowValidator.validate(Collections.emptyMap(), inputs);
+	}
+
+	@Test
+	public void testEmptyInput() throws JsonProcessingException {
+		workflowValidator.validate(generateInputDefinition(), Collections.emptyMap());
 	}
 
 	@Test
 	public void testSingleInvalidInput() throws JsonProcessingException {
-		final WorkflowDef def = new WorkflowDef();
-		def.setInputDefinition(generateInputDefinition());
 		final Map<String, Object> inputs = new HashMap<>();
 		inputs.put("person", Collections.emptyMap());
-		final Workflow workflow = new Workflow();
-		workflow.setInput(inputs);
 
 		try {
-			workflowValidator.validate(def, workflow);
+			workflowValidator.validate(generateInputDefinition(), inputs);
 		} catch (final ValidationException e) {
 			Assert.assertEquals(1, e.getViolationCount());
 			Assert.assertEquals(1, e.getErrors().size());
@@ -68,15 +64,11 @@ public class TestWorkflowValidator {
 
 	@Test
 	public void testMultipleInvalidInputs() throws JsonProcessingException {
-		final WorkflowDef def = new WorkflowDef();
-		def.setInputDefinition(generateInputDefinition());
 		final Map<String, Object> inputs = new HashMap<>();
 		inputs.put("person", Collections.singletonMap("age", 11));
-		final Workflow workflow = new Workflow();
-		workflow.setInput(inputs);
 
 		try {
-			workflowValidator.validate(def, workflow);
+			workflowValidator.validate(generateInputDefinition(), inputs);
 		} catch (final ValidationException e) {
 			Assert.assertEquals(2, e.getViolationCount());
 			Assert.assertEquals(2, e.getErrors().size());
@@ -87,15 +79,11 @@ public class TestWorkflowValidator {
 
 	@Test
 	public void testValidInput() throws JsonProcessingException {
-		final WorkflowDef def = new WorkflowDef();
-		def.setInputDefinition(generateInputDefinition());
 		final Map<String, Object> person = new HashMap<>();
 		person.put("name", "John");
 		person.put("age", 24);
 		final Map<String, Object> inputs = Collections.singletonMap("person", person);
-		final Workflow workflow = new Workflow();
-		workflow.setInput(inputs);
-		workflowValidator.validate(def, workflow);
+		workflowValidator.validate(generateInputDefinition(), inputs);
 
 	}
 

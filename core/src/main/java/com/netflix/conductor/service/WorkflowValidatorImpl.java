@@ -23,16 +23,14 @@ import org.everit.json.schema.loader.SchemaLoader;
 import org.json.JSONObject;
 
 import java.util.List;
+import java.util.Map;
 
 
 public class WorkflowValidatorImpl implements WorkflowValidator {
 	@Override
-	public void validate(WorkflowDef workflowDef, Workflow workflow) {
-		if (workflowDef.getInputDefinition().isEmpty()) {
-			return;
-		}
-		final JSONObject jsonSchema = new JSONObject(workflow.getInput());
-		final JSONObject jsonSchemaDefinition = new JSONObject(workflowDef.getInputDefinition());
+	public void validate(final Map<String, Object> inputDefinition, final Map<String, Object> input) {
+		final JSONObject jsonSchema = new JSONObject(input);
+		final JSONObject jsonSchemaDefinition = new JSONObject(inputDefinition);
 		final Schema schema = SchemaLoader.builder().draftV7Support()
 				.schemaJson(jsonSchemaDefinition).build().load().build();
 		try {
