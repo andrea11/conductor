@@ -50,8 +50,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -95,7 +95,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "compileClasspath": {
@@ -149,8 +149,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -194,7 +194,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "default": {
@@ -248,8 +248,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -293,7 +293,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "findbugs": {
@@ -367,8 +367,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -412,7 +412,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "runtimeClasspath": {
@@ -466,8 +466,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -511,7 +511,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "testCompile": {
@@ -565,8 +565,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -611,7 +611,7 @@
             "locked": "3.0.0"
         },
         "org.mockito:mockito-core": {
-            "locked": "3.1.0",
+            "locked": "3.3.3",
             "requested": "3.1.0"
         },
         "org.powermock:powermock-api-mockito2": {
@@ -684,8 +684,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -730,7 +730,7 @@
             "locked": "3.0.0"
         },
         "org.mockito:mockito-core": {
-            "locked": "3.1.0",
+            "locked": "3.3.3",
             "requested": "3.1.0"
         },
         "org.powermock:powermock-api-mockito2": {
@@ -803,8 +803,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -849,7 +849,7 @@
             "locked": "3.0.0"
         },
         "org.mockito:mockito-core": {
-            "locked": "3.1.0",
+            "locked": "3.3.3",
             "requested": "3.1.0"
         },
         "org.powermock:powermock-api-mockito2": {
@@ -922,8 +922,8 @@
             "requested": "1.8.7"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.sun.jersey:jersey-client": {
             "locked": "1.19.4",
@@ -968,7 +968,7 @@
             "locked": "3.0.0"
         },
         "org.mockito:mockito-core": {
-            "locked": "3.1.0",
+            "locked": "3.3.3",
             "requested": "3.1.0"
         },
         "org.powermock:powermock-api-mockito2": {

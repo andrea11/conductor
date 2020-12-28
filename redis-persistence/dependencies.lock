@@ -80,7 +80,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -136,7 +136,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",
@@ -224,7 +224,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -280,7 +280,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",
@@ -368,7 +368,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -424,7 +424,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",
@@ -522,7 +522,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -578,7 +578,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",
@@ -666,7 +666,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -722,7 +722,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",
@@ -810,7 +810,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -874,7 +874,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",
@@ -962,7 +962,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -1026,7 +1026,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",
@@ -1114,7 +1114,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -1178,7 +1178,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",
@@ -1266,7 +1266,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -1330,7 +1330,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "locked": "3.0.1",

@@ -10,7 +10,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -176,13 +176,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -258,11 +264,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -436,7 +454,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -456,7 +474,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -622,13 +640,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -704,11 +728,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -882,7 +918,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -902,7 +938,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -1068,13 +1104,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -1150,11 +1192,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -1328,7 +1382,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -1348,7 +1402,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -1514,13 +1568,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -1596,11 +1656,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -1774,7 +1846,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -1864,7 +1936,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -2030,13 +2102,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -2112,11 +2190,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -2290,7 +2380,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -2310,7 +2400,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -2476,13 +2566,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -2558,11 +2654,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -2736,7 +2844,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -2756,7 +2864,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -2922,13 +3030,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -3004,11 +3118,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -3182,7 +3308,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -3202,7 +3328,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -3368,13 +3494,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -3450,11 +3582,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -3636,7 +3780,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -3656,7 +3800,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -3822,13 +3966,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -3904,11 +4054,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -4090,7 +4252,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -4110,7 +4272,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -4276,13 +4438,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -4358,11 +4526,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -4544,7 +4724,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [
@@ -4564,7 +4744,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "1.11.893"
+            "locked": "1.11.924"
         },
         "com.datastax.cassandra:cassandra-driver-core": {
             "firstLevelTransitive": [
@@ -4730,13 +4910,19 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.netflix.spectator:spectator-reg-metrics3": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.122.0"
         },
         "com.rabbitmq:amqp-client": {
             "firstLevelTransitive": [
@@ -4812,11 +4998,23 @@
             ],
             "locked": "1.14.0"
         },
+        "io.micrometer:micrometer-registry-prometheus": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "1.6.2"
+        },
         "io.nats:java-nats-streaming": {
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-contribs"
             ],
             "locked": "0.5.0"
+        },
+        "io.prometheus:simpleclient": {
+            "firstLevelTransitive": [
+                "com.netflix.conductor:conductor-contribs"
+            ],
+            "locked": "0.9.0"
         },
         "io.reactivex:rxjava": {
             "firstLevelTransitive": [
@@ -4998,7 +5196,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.29"
+            "locked": "1.7.30"
         },
         "redis.clients:jedis": {
             "firstLevelTransitive": [

@@ -75,7 +75,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -155,7 +155,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "compileClasspath": {
@@ -234,7 +234,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -314,7 +314,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "default": {
@@ -393,7 +393,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -473,7 +473,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "jacocoAgent": {
@@ -562,7 +562,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -642,7 +642,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "runtimeClasspath": {
@@ -721,7 +721,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -801,7 +801,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "testCompile": {
@@ -880,7 +880,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -1055,7 +1055,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -1230,7 +1230,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [
@@ -1405,7 +1405,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-core"
             ],
-            "locked": "0.68.0"
+            "locked": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "firstLevelTransitive": [

@@ -23,7 +23,6 @@ import com.netflix.conductor.core.config.EventModule;
 import com.netflix.conductor.core.config.SystemPropertiesConfiguration;
 import com.netflix.conductor.core.config.ValidationModule;
 import com.netflix.conductor.core.execution.WorkflowSweeper;
-import com.netflix.conductor.dyno.SystemPropertiesDynomiteConfiguration;
 import com.netflix.conductor.grpc.server.GRPCModule;
 import com.netflix.conductor.interceptors.ServiceInterceptor;
 import com.netflix.conductor.jetty.server.JettyModule;

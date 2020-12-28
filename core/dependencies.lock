@@ -56,8 +56,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
@@ -105,7 +105,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "compileClasspath": {
@@ -165,8 +165,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
@@ -214,7 +214,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "default": {
@@ -274,8 +274,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
@@ -323,7 +323,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "jacocoAgent": {
@@ -393,8 +393,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
@@ -442,7 +442,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "runtimeClasspath": {
@@ -502,8 +502,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
@@ -551,7 +551,7 @@
             "firstLevelTransitive": [
                 "com.netflix.conductor:conductor-common"
             ],
-            "locked": "1.7.25"
+            "locked": "1.7.30"
         }
     },
     "testCompile": {
@@ -611,8 +611,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
@@ -732,8 +732,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
@@ -853,8 +853,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
@@ -974,8 +974,8 @@
             "requested": "0.12.17"
         },
         "com.netflix.spectator:spectator-api": {
-            "locked": "0.68.0",
-            "requested": "0.68.0"
+            "locked": "0.122.0",
+            "requested": "0.122.0"
         },
         "com.spotify:completable-futures": {
             "locked": "0.3.1",
